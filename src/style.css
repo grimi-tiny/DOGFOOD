@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#root{
+    min-height: 100vh;
+    background-color:rgb(197, 167, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.mark{
+color: rgb(64, 15, 201);
+}
+.card{
+    width: 150px ;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 35px;
+}
