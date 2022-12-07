@@ -1,9 +1,32 @@
 body{
     margin: 0;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:blanchedalmond;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
 }
 .container{
     min-height: 100vh;
     display: grid;
     grid-template-rows: 100px auto 50px;
+    
+}
+.container>* {
+    padding: 0 calc(50% - 600px);
+}
+@media (max-width: 1260px) {
+    .container>* {
+        padding: 0 30px;
+    }
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.cards{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr) ;
+    gap: 2em;
 }

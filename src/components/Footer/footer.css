@@ -4,4 +4,11 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px;
+}
+.footer{
+    font-size: 1.5em;
+}
+.footer__text{
+    text-align: right;
 }

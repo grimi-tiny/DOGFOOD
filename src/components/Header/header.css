@@ -1,0 +1,26 @@
+header{
+    background-color: rgb(153, 112, 112);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.logo{
+    font-size: 1.5em;
+}
+.search{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    
+}
+.search:focus{
+    border-bottom: white;
+}
+.menu{
+    display: flex;
+    gap: 1em;
+}
+
