@@ -1,22 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
+import products from "./assets/data.json";
 
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
-import Card from "./components/Card";
+
+import Catalog from "./pages/Catalog.jsx";
+import Home from "./pages/Home.jsx";
+
+/*import Search from "./components/Search/search";*/
 
 const smiles =["^__^","-__-","*__*","=__=","~_~","=)","=/","=("]
 
 const App = () =>{
+    const [user, setUser] = useState(localStorage.getItem("user8"));
     return (
     <div className="container">
-        <Header/>
+        <Header user={user} setUser={setUser} products={products}/>
         <main>
-            <h1>Главная страница</h1>
-            <div className="cards">
-                     {smiles.map((el, i) => <Card key={"card_" + i} text={el} like={(i+1) % 3 ===0 }/>)}
-                    
-            </div>
+                        
+            {user ? <Catalog data={products}/> :<Home data={smiles}/>}
         </main>
         <Footer/>
     </div>)

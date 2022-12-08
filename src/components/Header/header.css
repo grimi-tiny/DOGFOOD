@@ -1,6 +1,6 @@
 header{
     background-color: rgb(153, 112, 112);
-    color: #fff;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,12 +12,12 @@ header{
 .search{
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid rgb(0, 0, 0);
     outline: none;
     
 }
 .search:focus{
-    border-bottom: white;
+    border-bottom: rgb(0, 0, 0);
 }
 .menu{
     display: flex;
