@@ -1,19 +1,22 @@
 header{
-    background-color: rgb(153, 112, 112);
+    background-color: rgba(153, 112, 112, 0.753);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    font-size: 15px;
 }
 .logo{
-    font-size: 1.5em;
+    
+    font-size: 25px;
 }
 .search{
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid bisque;
     outline: none;
+    
     
 }
 .search:focus{
@@ -22,5 +25,6 @@ header{
 .menu{
     display: flex;
     gap: 1em;
+    font-size: 25px;
 }
 

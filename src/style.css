@@ -27,6 +27,108 @@ a{
 }
 .cards{
     display: grid;
-    grid-template-columns:repeat(4, 1fr) ;
+    grid-template-columns:repeat(3, 1fr) ;
     gap: 2em;
 }
+.discription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.productItem{
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    font-size: 17px;
+    
+}
+.itemimg{
+    height:210px;
+    width:180px;
+}
+.productItem_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid 2px;
+    margin: 5px;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 10px;
+}
+.productItem_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid 2px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 10px;
+}
+.text{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 10px;
+    font-size: 12px;
+    font-family:'Times New Roman', Times, serif;
+}
+.butn:hover{
+    background-color: rgba(153, 112, 112, 0.726);
+    border: solid 2px;
+}
+.butn{
+    border-radius: 20px;
+    padding: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    border: solid 2px;
+    background-color: bisque;
+}
+.form{
+    display: grid;
+    justify-content:space-evenly;
+    gap: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background: radial-gradient(bisque, rgb(153, 112, 112) );
+    border-radius: 20px;
+    border: solid 1px;
+}
+.form_box{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+.input{
+    border-radius: 20px;
+    padding: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    border: solid 2px;
+    background-color: bisque; 
+}
+.order{
+    align-items: center;
+    padding: 10px;
+}
+.reklamaimg{ 
+    height:210px;
+    width:200px;
+}
+.itemimg_1{
+    width: 190px;
+}
+.itemimg:hover{
+    transform: scale(1.2);
+    border-radius: 20px;}

@@ -8,21 +8,34 @@ import Footer from "./components/Footer/footer";
 import Catalog from "./pages/Catalog.jsx";
 import Home from "./pages/Home.jsx";
 
-/*import Search from "./components/Search/search";*/
+import Modal from "./components/Modal";
 
-const smiles =["^__^","-__-","*__*","=__=","~_~","=)","=/","=("]
+
+const smiles = [
+     "Желудки утиные сушено-вяленые",
+     "https://react-learning.ru/image-compressed/1.jpg",
+  ]
 
 const App = () =>{
     const [user, setUser] = useState(localStorage.getItem("user8"));
+    const [modalActive, setModalActive] = useState(false);
     return (
+    <>
     <div className="container">
-        <Header user={user} setUser={setUser} products={products}/>
+        <Header 
+        user={user}
+        setUser={setUser}
+        products={products}
+        setModalActive={setModalActive}/>
         <main>
-                        
+            {}   
             {user ? <Catalog data={products}/> :<Home data={smiles}/>}
         </main>
         <Footer/>
-    </div>)
+    </div>
+    <Modal isActive={modalActive} setState={setModalActive}/>
+    </>
+    )
 }
 
 export default App;

@@ -1,14 +1,16 @@
 footer{
-    background-color: rgb(153, 112, 112);
+    background-color: rgba(153, 112, 112, 0.753);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    
 }
 .footer{
-    font-size: 1.5em;
+    font-size: 15px;
 }
 .footer__text{
     text-align: right;
-}
+    font-size: 15px;
+} 
