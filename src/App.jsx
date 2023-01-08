@@ -11,7 +11,7 @@ import Home from "./pages/Home.jsx";
 import Modal from "./components/Modal";
 
 
-const smiles = [];
+const smiles = [ ];
 
 const App = () =>{
     const [user, setUser] = useState(localStorage.getItem("user8"));
