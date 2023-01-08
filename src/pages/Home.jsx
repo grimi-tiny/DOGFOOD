@@ -45,6 +45,10 @@ export default ({data}) => {
                 <div className="discription">
                     <h2>Если у вас остались вопросы - оставьте свои контакты и мы вам перезвоним</h2>
                 </div>
+                <div className="cards">
+                     {data.map((el, i) => <Card key={"card_" + i} text={el.name} like={(i+1) % 3 ===0 }/>)}
+                    
+            </div>
                 <div className="form">
                     <form className="form_box">
 

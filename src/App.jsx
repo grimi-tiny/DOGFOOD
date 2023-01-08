@@ -11,10 +11,7 @@ import Home from "./pages/Home.jsx";
 import Modal from "./components/Modal";
 
 
-const smiles = [
-     "Желудки утиные сушено-вяленые",
-     "https://react-learning.ru/image-compressed/1.jpg",
-  ]
+const smiles = [];
 
 const App = () =>{
     const [user, setUser] = useState(localStorage.getItem("user8"));

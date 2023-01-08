@@ -132,3 +132,49 @@ a{
 .itemimg:hover{
     transform: scale(1.2);
     border-radius: 20px;}
+
+    @media (max-width: 720px) {
+        header {
+            padding: 10px;
+        }
+      
+        .itemimg {
+            height: 20px;
+        }
+
+      
+        .about {
+            flex-direction: column-reverse;
+            padding: 50px 10px;
+        }
+      
+        .about h1 {
+            font-size: 36px;
+            line-height: 40px;
+        }
+      
+        .about__image {
+            width: 280px;
+        }
+      
+        .about__sun-image {
+            width: 75px;
+            height: 75px;
+        }
+      
+        .form {
+            padding: 50px 10px;
+        }
+      
+        .form h1 {
+            font-size: 36px;
+        }
+      
+        footer {
+            padding: 50px 10px;
+        }
+      
+        .footer__container {
+            flex-direction: column;
+        }
+     }
