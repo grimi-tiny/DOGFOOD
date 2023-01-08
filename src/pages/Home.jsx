@@ -58,7 +58,7 @@ export default ({data}) => {
                                                 
                             <input className="input" type="text" placeholder="Ваш номер телефона..."/>
     
-                            <input className="input" type="text" placeholder="Выберите время"/>
+                            <input className="input" type="text" placeholder="Выберите время..."/>
                         
                     </form>
                 </div>
