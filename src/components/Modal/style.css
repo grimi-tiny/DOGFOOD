@@ -23,21 +23,7 @@
     margin: 0;
     text-align: center;
 }
-.modal-close{
-    width: 20px;
-    height: 20px;
-    background-color: #222;
-    border-radius: 50px;
-    border: 2px solid;
-    box-sizing: border-box;
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    cursor: pointer;
-}
-.modal-close:hover {
-    background-color: rgb(153, 112, 112) ;
-}
+
 form{
     display: grid;
     gap: 10px;
@@ -48,7 +34,7 @@ input{
     box-sizing: border-box;
     padding: 6px 12px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 3px solid black;
     font-size: 16px;
     outline: none;
  }
@@ -63,6 +49,15 @@ input:focus{
  }
  button.link{
     border-color: transparent;
-    border: 2px solid rgb(153, 112, 112);
+    border: 3px solid rgb(153, 112, 112);
     box-sizing: border-box;
  }
+ #modal-close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 220px;
+    right: 2px;
+    cursor: pointer;
+ }
+ 

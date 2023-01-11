@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default ({change}) => {
+export default ({change, api, close}) => {
     const [inp1, setInp1] = useState("");
     const [inp2, setInp2 ] = useState("");
     const [inp3, setInp3] = useState("");
@@ -26,6 +26,21 @@ export default ({change}) => {
             password: inp2
         }
         console.log(body);
+        api.signUp(body)
+            .then(res => res.json())
+            .then(data => {
+                    console.log(data);
+                    if(!data.err){
+                        api.logIn(body);
+                        setInp1("");
+                        setInp2("");
+                        setInp3("");
+                        close(false);
+                    } else{
+                        alert(data.message);
+                        // отобразить
+                    }
+            })
     }
 
     return <form onSubmit ={sendForm}>

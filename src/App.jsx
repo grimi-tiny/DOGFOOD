@@ -10,12 +10,15 @@ import Home from "./pages/Home.jsx";
 
 import Modal from "./components/Modal";
 
+import { Api } from "./Api";
+
 
 const smiles = [ ];
 
 const App = () =>{
     const [user, setUser] = useState(localStorage.getItem("user8"));
     const [modalActive, setModalActive] = useState(false);
+    const [api, setApi] = useState(new Api(""));
     return (
     <>
     <div className="container">
@@ -30,7 +33,7 @@ const App = () =>{
         </main>
         <Footer/>
     </div>
-    <Modal isActive={modalActive} setState={setModalActive}/>
+    <Modal isActive={modalActive} setState={setModalActive} api={api}/>
     </>
     )
 }
