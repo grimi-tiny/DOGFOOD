@@ -9,7 +9,6 @@ export default ({data}) => {
             <h1 className="dis-hit">Приветствуем вас!</h1>
             <h2 className="dis-hit">Мы надеемся, что ваши питомцы будут рады от наших продуктов и им захочется еще! </h2>
             <h2 className="dis-hit"> А сейчас, предлагаем вам ознакомиться  с нашими популярными товарами</h2>
-            
             </div>
             <h2 className="hit">Хиты</h2>
             <div className="productItem">
@@ -52,7 +51,7 @@ export default ({data}) => {
                     <img className="itemimg" src="https://shampoo.doctor/images/detailed/1/Recover_dog.png"/>
                     <div className="text">
                         <h2>Шампуни и средства по уходу для собак </h2>
-                        <button className="butn">Цена: 450 ₽</button>
+                        <button className="butn">От 899 ₽</button>
                     </div>
                 </div>
 
@@ -60,7 +59,7 @@ export default ({data}) => {
                     <img className="itemimg-ball" src="https://zoopt.ru/upload/iblock/078/079f448b_0c7c_11e6_80bb_002590b55a9c_1.jpg"/>
                     <div className="text">
                         <h2>Игрукши для домашних питомцев</h2>
-                        <button className="butn">Цена: 340 ₽</button>
+                        <button className="butn">От 199 ₽</button>
                     </div>
                 </div>
             </div>
@@ -72,6 +71,14 @@ export default ({data}) => {
                     
             </div>
                 <div className="form">
+                    <div className="lbl">
+                        <label className="lbl-css">Введите ваше имя:</label>
+
+                        <label className="lbl-css">Введите вашу почту:</label>
+
+                        <label className="lbl-css">Введите номер телефона:</label>
+                    </div>
+                    
                     <form className="form_box">
 
                             <input className="input" type="text" placeholder="Как вас зовут?"/>
@@ -80,7 +87,7 @@ export default ({data}) => {
                                                 
                             <input className="input" type="text" placeholder="Ваш номер телефона..."/>
     
-                            <input className="input" type="text" placeholder="Выберите время..."/>
+                           
                         
                     </form>
                 </div>

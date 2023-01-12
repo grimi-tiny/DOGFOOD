@@ -156,23 +156,40 @@ a{
     top: 1px;
   }
 .form{
-    display: grid;
-    justify-content:space-evenly;
-    gap: 15px;
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
     padding-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     background: radial-gradient(bisque, rgb(153, 112, 112) );
     border-radius: 20px;
     border: solid 3px;
 }
+.lbl{
+    display: grid;
+    align-items: center;
+    padding-top: 10px;
+}
+.lbl-css{
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
 .form_box{
     display: grid;
     align-items: center;
-    justify-content: space-between;
+    
 }
 .input{
+    height: 40px;
+    width: 200px;
     border-radius: 20px;
     padding: 5px;
+    justify-content: center;
     font-style: italic;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     align-items: center;
@@ -212,11 +229,11 @@ a{
 }
 .productItems{
     display: grid;
-    grid-template-columns: 600px 600px ;
+    grid-template-columns: 585px 585px ;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 4px;
-    font-size: 17px;
+    margin-bottom: 10px;
     
 }
 .dis-hit{
