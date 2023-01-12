@@ -1,7 +1,7 @@
 body{
     margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-   background-color: bisque;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: bisque;
 }
 a{
     text-decoration: none;
@@ -59,6 +59,7 @@ a{
     padding: 5px;
     border-radius: 30px;
     font-size: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .productItem_2{
     display: flex;
@@ -71,6 +72,7 @@ a{
     padding: 10px;
     border-radius: 30px;
     font-size: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .text{
     display: grid;
@@ -79,7 +81,7 @@ a{
     padding: 8px;
     margin: 10px;
     font-size: 12px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .butn:hover{
     background-color: rgba(153, 112, 112, 0.726);
@@ -113,7 +115,7 @@ a{
     border-radius: 20px;
     padding: 5px;
     font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     align-items: center;
     border: solid 2px;
     background-color: bisque; 

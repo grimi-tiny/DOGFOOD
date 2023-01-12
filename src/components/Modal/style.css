@@ -39,7 +39,7 @@ input{
     outline: none;
  }
 input:focus{
-     border-bottom-color:  rgb(153, 112, 112);
+     border-color:  rgb(153, 112, 112);
  }
  button.btn{
     border: none;

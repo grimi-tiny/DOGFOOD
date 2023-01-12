@@ -22,7 +22,13 @@ class Api{
             },
             body: JSON.stringify(body)
     });
-        
+    }
+    getProducts(){
+        return fetch(`${this.path}/products`, {
+                headers:{
+                    "authorization": `Bearer ${this.token}`
+                }
+        })
     }
 }
 export {Api};
