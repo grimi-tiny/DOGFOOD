@@ -78,24 +78,65 @@ a{
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 8px;
-    margin: 10px;
+    
+    margin: 8px;
     font-size: 12px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .butn:hover{
-    background-color: rgba(153, 112, 112, 0.726);
+    background-color: rgb(153, 112, 112);
     border: solid 3px;
 }
 .butn{
-    border-radius: 20px;
+   /* border-radius: 20px;
     padding: 5px;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
     border: solid 3px;
+    background-color: bisque;*/
+    align-items: center;
+    position: relative;
     background-color: bisque;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
 }
+.butn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+  }
+  
+  .butn:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .butn:active {
+    top: 1px;
+  }
 .form{
     display: grid;
     justify-content:space-evenly;
