@@ -4,12 +4,7 @@ import Card from "../components/Card";
 export default ({data}) => {
     return <>
             <div className="home">
-            <div className="discription">
             
-            <h1 className="dis-hit">Приветствуем вас!</h1>
-            <h2 className="dis-hit">Мы надеемся, что ваши питомцы будут рады от наших продуктов и им захочется еще! </h2>
-            <h2 className="dis-hit"> А сейчас, предлагаем вам ознакомиться  с нашими популярными товарами</h2>
-            </div>
             <h2 className="hit">Хиты</h2>
             <div className="productItem">
                 <div className="productItem_1">
