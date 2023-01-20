@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "../components/Card";
+import Ads from "../components/Ads/ads";
 
 export default ({data}) => {
     return <>
             <div className="home">
-            
+            <Ads></Ads>
             <h2 className="hit">Хиты</h2>
             <div className="productItem">
                 <div className="productItem_1">
