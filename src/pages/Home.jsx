@@ -1,10 +1,13 @@
 import React from "react";
-import Card from "../components/Card";
 import Ads from "../components/Ads/ads";
+import {Link} from "react-router-dom";
 
 export default ({data}) => {
     return <>
             <div className="home">
+                <div className="cat_cont">
+                    <Link className="cat" to="/catalog">Перейти в каталог</Link>
+                </div>
             <Ads></Ads>
             <h2 className="hit">Хиты</h2>
             <div className="productItem">
@@ -62,10 +65,7 @@ export default ({data}) => {
                 <div className="discription">
                     <h2 className="dis-hit">Если у вас остались вопросы - оставьте свои контакты и мы вам перезвоним</h2>
                 </div>
-                <div className="cards">
-                     {data.map((el, i) => <Card key={"card_" + i} text={el.name} like={(i+1) % 3 ===0 }/>)}
-                    
-            </div>
+                
                 <div className="form">
                     <div className="lbl">
                         <label className="lbl-css">Введите ваше имя:</label>

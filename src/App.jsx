@@ -1,19 +1,24 @@
 import React, {useState, useEffect} from "react";
+import {Routes, Route} from "react-router-dom";
+//route - маршрут
+
 import "./style.css";
 import products from "./assets/data.json";
 
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 
-import Catalog from "./pages/Catalog.jsx";
-import Home from "./pages/Home.jsx";
+import Catalog from "./pages/Catalog";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
 import Modal from "./components/Modal";
 
 import { Api } from "./Api";
 
 
-const smiles = [ ];
+
+const smiles = ["fsdf"];
 
 const App = () =>{
     const [user, setUser] = useState(localStorage.getItem("user8"));
@@ -65,8 +70,14 @@ const App = () =>{
         products={products}
         setModalActive={setModalActive}/>
         <main>
-            {}   
-            {user ? <Catalog data={goods}/> :<Home data={smiles}/>}
+            <Routes>
+                <Route path="/" element={<Home data={smiles}/>}/>
+                <Route path="/catalog" element={
+                    <Catalog data={goods}/>}/>
+                <Route path="/profile" element={
+                    <Profile setUser={setUser} user={user}/>
+                }/>
+            </Routes>   
         </main>
         <Footer/>
     </div>

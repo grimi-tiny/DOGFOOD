@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./header.css";
 import Search from "../Search/search";
+import {Link} from "react-router-dom";
 
 
 export default ({user, setUser, products, setModalActive}) => {
@@ -22,10 +23,10 @@ export default ({user, setUser, products, setModalActive}) => {
         setUser("");
     }
     return <header>
-        <a className="logo" href="">DoogFood <i class="fa-solid fa-dog"></i></a>
+        <Link className="logo" to="/">DoogFood <i class="fa-solid fa-dog"></i></Link>
         <Search data={products}/>
         <nav className="menu">
-            { user && <a href="">{user}</a>}
+            { user && <Link to="/profile">{user}</Link>}
             { !user && <a href="" onClick={logIn}>Войти <i class="fa-solid fa-house"></i></a>}
             { user && <a href="" onClick={logOut}>Выйти</a>}
         </nav>

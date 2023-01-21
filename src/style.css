@@ -99,8 +99,9 @@ a{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .butn:hover{
-    background-color: rgb(153, 112, 112);
-    border: solid 3px;
+    background-color: rgb(141, 111, 111);
+    border: solid 3px black;
+    color: white;
 }
 .butn{
    /* border-radius: 20px;
@@ -117,7 +118,7 @@ a{
     position: relative;
     background-color: bisque;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     padding: 0.8em 1.8em;
     cursor:pointer;
@@ -126,7 +127,7 @@ a{
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-    
+    border: 2.5px solid;
 }
 .butn:after {
     content: "";
@@ -242,4 +243,20 @@ a{
   background-image: linear-gradient(139deg, rgba(191,42,90,1) 0%, rgba(235,36,74,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.cat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    border: 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    width: 400px;background: radial-gradient(bisque, rgb(153, 112, 112) );
+}
+.cat_cont{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
 }
