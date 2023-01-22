@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/DOGFOOD/static/css/main.be839583.css",
-    "main.js": "/DOGFOOD/static/js/main.203530ad.js",
-    "index.html": "/DOGFOOD/index.html",
-    "static/media/xmark-solid.svg": "/DOGFOOD/static/media/xmark-solid.60cf68c83c1745a9a5a3497035f6101d.svg",
-    "static/media/magnifying-glass-solid.svg": "/DOGFOOD/static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
-    "main.be839583.css.map": "/DOGFOOD/static/css/main.be839583.css.map",
-    "main.203530ad.js.map": "/DOGFOOD/static/js/main.203530ad.js.map"
+    "main.css": "/static/css/main.61309a21.css",
+    "main.js": "/static/js/main.3f6fdab3.js",
+    "static/media/pug1.jpg": "/static/media/pug1.f5c5f69142e3d45fac85.jpg",
+    "index.html": "/index.html",
+    "static/media/xmark-solid.svg": "/static/media/xmark-solid.60cf68c83c1745a9a5a3497035f6101d.svg",
+    "static/media/magnifying-glass-solid.svg": "/static/media/magnifying-glass-solid.06e310dbfbf3ab21da478aef6c037c14.svg",
+    "main.61309a21.css.map": "/static/css/main.61309a21.css.map",
+    "main.3f6fdab3.js.map": "/static/js/main.3f6fdab3.js.map"
   },
   "entrypoints": [
-    "static/css/main.be839583.css",
-    "static/js/main.203530ad.js"
+    "static/css/main.61309a21.css",
+    "static/js/main.3f6fdab3.js"
   ]
 }
