@@ -8,9 +8,10 @@ import products from "./assets/data.json";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 
-import Catalog from "./pages/Catalog";
-import Home from "./pages/Home";
+import Catalog from "./pages/Catalog.jsx";
+import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile";
+import Product from "./pages/Product";
 
 import Modal from "./components/Modal";
 
@@ -77,6 +78,7 @@ const App = () =>{
                 <Route path="/profile" element={
                     <Profile setUser={setUser} user={user}/>
                 }/>
+                <Route path="/catalog/:id" element={<Product/>}/>
             </Routes>   
         </main>
         <Footer/>

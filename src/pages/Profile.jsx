@@ -1,14 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
-export default ({setUser, user}) =>{
+
+export default ({user, setUser}) =>{
+const navigate = useNavigate();
+
     const logOut = (e) =>{
         e.preventDefault();
-        setUser=("");
+        setUser=(null);
+        localStorage.removeItem("user8");
+        navigate("/");
     }
     return<>
         <h1>Личный кабинет</h1>
         <p>Привет, {user}</p>
-        <Link to="" onClick={logOut}>Выйти из аккаунта</Link>
+        <a href="" onClick={logOut}  style={{color: "rgba(153, 112, 112)"}}>Выйти из аккаунта</a>       
     </>
 }

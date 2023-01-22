@@ -26,7 +26,7 @@ export default ({user, setUser, products, setModalActive}) => {
         <Link className="logo" to="/">DoogFood <i class="fa-solid fa-dog"></i></Link>
         <Search data={products}/>
         <nav className="menu">
-            { user && <Link to="/profile">{user}</Link>}
+            { user && <Link to= "/profile">{user}</Link>}
             { !user && <a href="" onClick={logIn}>Войти <i class="fa-solid fa-house"></i></a>}
             { user && <a href="" onClick={logOut}>Выйти</a>}
         </nav>
