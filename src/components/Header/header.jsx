@@ -4,7 +4,7 @@ import Search from "../Search/search";
 import {Link} from "react-router-dom";
 
 
-export default ({user, setUser, products, setModalActive}) => {
+export default ({user, setUser, goods, searchGoods, setModalActive}) => {
     /*const [user, setUser] = useState(localStorage.getItem("user8"));
 
 /*    let user = localStorage.getItem("user8");*/
@@ -23,8 +23,8 @@ export default ({user, setUser, products, setModalActive}) => {
         setUser("");
     }
     return <header>
-        <Link className="logo" to="/">DoogFood <i class="fa-solid fa-dog"></i></Link>
-        <Search data={products}/>
+        <Link className="logo" to="/">DogFood <i class="fa-solid fa-dog"></i></Link>
+        <Search data={goods} searchGoods={searchGoods}/>
         <nav className="menu">
             { user && <Link to= "/profile">{user}</Link>}
             { !user && <a href="" onClick={logIn}>Войти <i class="fa-solid fa-house"></i></a>}

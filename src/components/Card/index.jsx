@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 
+
 export default ({text, like}) => {
     console.log(like)
     return <div className="card">

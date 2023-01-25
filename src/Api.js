@@ -4,6 +4,8 @@ class Api{
         this.group = "group-8";
         this.token = token;
     }
+    
+
     signUp(body){ //регистация
         body.group = this.group;
             return fetch(`${this.path}/signup`, {
