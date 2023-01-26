@@ -161,6 +161,30 @@ a{
   .butn:active {
     top: 1px;
   }
+  .butnn{
+    width: auto;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(161, 126, 126, 0.692);;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 2px solid;
+  }
+.butnn:hover{
+    background-color: bisque;
+    border: solid 2.px black;
+    color: black;
+}
 .form{
     display: flex;
     justify-content: center;
@@ -299,3 +323,83 @@ a{
     border: solid 2.px black;
     color: white;
     }
+.reviews{
+    display: grid;
+    grid-template-columns: 350px 200px 200px ;
+}
+.product_i{
+    height: 450px;
+    width: 500px;
+    border-radius: 40px;
+    border: 2px solid ;
+}
+.img_id{
+    font-size: 20px;
+    padding-right: 50px;
+    padding-bottom: 0px;
+}
+.Prod-description{
+    display: flex;
+   padding-top: 20px;
+    
+}
+.description{
+    display: flow-root;
+    font-size: 20px;
+}
+.discouner{
+display: flex;
+align-items: center;
+position: relative;
+bottom: 273px;
+left: -137px;
+background-color:crimson;
+border-radius: 75px;
+border: 1px ;
+width: 40px;
+height: 40px;
+padding: 18px;
+margin: 10px;
+font-size: 12px;
+color: white;
+
+}
+.cross{
+    position: relative;
+    top: -80px;
+    right: -30px;
+    color: rgb(228, 26, 66);
+    font-size: 24px;
+}
+.css_price{
+    font-size: 22px;
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.garantia{
+    margin-left: 40px;
+    padding: 20px;
+    border: 2px solid;
+    display: grid;
+    align-items: center;
+    border-radius: 30px;
+    background-color: aliceblue;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: 350px;
+}
+.p{
+    display: flex;
+    align-items: center;
+}
+.dile-garant{
+    display: grid;
+    gap: 30px;
+}
+
+.spn{
+    font-size: large;
+}

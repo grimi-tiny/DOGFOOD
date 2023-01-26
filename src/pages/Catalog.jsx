@@ -9,7 +9,7 @@ export default ({data}) => {
     ? <>
             <h1>Каталог товаров</h1>
                 <div className="cards">
-                     {data && data.map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id}>
+                     {data && data.map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id} >
                         <Card 
                             key={"card_" + i} 
                             text={el.name} 

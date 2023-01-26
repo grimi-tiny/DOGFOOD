@@ -12,6 +12,7 @@ import Catalog from "./pages/Catalog.jsx";
 import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile";
 import Product from "./pages/Product";
+import Reviews from "./pages/Reviews";
 
 import Modal from "./components/Modal";
 
@@ -85,6 +86,8 @@ const App = () =>{
                 <Route path="/profile" element={ <Profile setUser={setUser} user={user}/>}/>
                 
                 <Route path="/catalog/:id" element={<Product/>}/>
+
+                <Route path="/reviews" element={<Reviews/>}/>
             </Routes>   
         </main>
         <Footer/>
