@@ -1,7 +1,7 @@
 .card{
     box-shadow: 0 0 5px #2226;
     border-radius: 1em;
-    padding: 1em;
+    padding: 1.5em;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

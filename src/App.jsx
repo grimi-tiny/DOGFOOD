@@ -7,6 +7,7 @@ import "./style.css";
 
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
+import Modal from "./components/Modal";
 
 import Catalog from "./pages/Catalog.jsx";
 import Home from "./pages/Home.jsx";
@@ -14,21 +15,27 @@ import Profile from "./pages/Profile";
 import Product from "./pages/Product";
 import Reviews from "./pages/Reviews";
 
-import Modal from "./components/Modal";
-
 import { Api } from "./Api";
+import Ctx from "./Ctx";
 
-
+const PATH ="/";
+// когда работаю с проектом локально на компьютере используем эту стрчку а 23 коментируем. 
+//const  PATH ="/DOGFOOD";
+// когда хотим на GitHub Pages мы комментируем 21 строку
 
 const smiles = ["fsdf"];
 
 const App = () =>{
-    const [user, setUser] = useState(localStorage.getItem("user8"));
+    let usr = localStorage.getItem("user8");
+    if (usr) {
+        usr=JSON.parse(usr);
+    }
+    const [user, setUser] = useState(usr);
     const [token, setToken] = useState(localStorage.getItem("token8"))
     const [modalActive, setModalActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
     const [goods, setGoods] = useState([]);
-    const [visiableGoods, setVisiableGoods]= useState(goods);
+    const [visibleGoods, setVisibleGoods]= useState(goods);
     
     useEffect(() => {
         console.log("Hello")
@@ -45,7 +52,11 @@ const App = () =>{
     useEffect(() =>{
         console.log("Change token")
         setApi(new Api(token));
-        setUser(localStorage.getItem("user8"))
+        let usr = localStorage.getItem("user8");
+        if (usr) {
+            usr=JSON.parse(usr);
+        }
+        setUser(usr);
     }, [token]);
     
     useEffect(()=>{
@@ -65,36 +76,47 @@ const App = () =>{
         }
     }, [api])
     useEffect(() =>{
-        setVisiableGoods(goods);
+        setVisibleGoods(goods);
     }, [goods])
+
     return (
-    <>
+    <Ctx.Provider value={{
+        user:user,
+        token:token,
+        api:api,
+        modalActive:modalActive,
+        goods:goods,
+        visibleGoods:visibleGoods,
+        setUser:setUser,
+        setToken:setToken,
+        setApi:setApi,
+        setModalActive:setModalActive,
+        setGoods:setGoods,
+        setVisibleGoods:setVisibleGoods,
+        PATH: PATH
+        
+        }}>
     <div className="container">
-        <Header 
-        user={user}
-        setUser={setUser}
-        //products={products}
-        goods={goods}
-        searchGoods={setVisiableGoods}
-        setModalActive={setModalActive}/>
+        <Header/>
         <main>
             <Routes>
-                <Route path="/" element={<Home data={smiles}/>}/>
+                <Route path={PATH} element={<Home data={smiles}/>}/>
 
-                <Route path="/catalog" element={ <Catalog data={visiableGoods}/>}/>
+                <Route path={PATH + "catalog"} element={ <Catalog data={smiles}/>}/>
                 
-                <Route path="/profile" element={ <Profile setUser={setUser} user={user}/>}/>
+                <Route path={PATH + "profile"} element={ <Profile />}/>
                 
-                <Route path="/catalog/:id" element={<Product/>}/>
+                <Route path={PATH + "catalog/:id"} element={<Product/>}/>
 
-                <Route path="/reviews" element={<Reviews/>}/>
+                <Route path={PATH + "reviews"} element={<Reviews/>}/>
             </Routes>   
         </main>
         <Footer/>
     </div>
-    <Modal isActive={modalActive} setState={setModalActive} api={api} setToken={setToken}/>
-    </>
+    <Modal />
+    </Ctx.Provider>
     )
 }
+
 
 export default App;

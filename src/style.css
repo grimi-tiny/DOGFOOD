@@ -29,11 +29,14 @@ a{
     display: grid;
     grid-template-columns:repeat(3, 1fr) ;
     gap: 2em;
+    
    
 }
 .card{
     display: flex;
     height: 80px;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
+    border: 1.5px solid black;
 }
 .discription{
     display: flex;
@@ -161,30 +164,61 @@ a{
   .butn:active {
     top: 1px;
   }
-  .butnn{
+/*кнопка в странице товара*/
+.butnn:hover{
+    background: radial-gradient(bisque, rgb(153, 112, 112) );
+    border: solid 1.px black;
+    color: black;
+}
+.butnn{
     width: auto;
-    height: 50px;
+    height: 60px;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: rgba(161, 126, 126, 0.692);;
+    top: -10px;
+    background-color: bisque;
     border-radius: 20px;
     font-size: 16px;
     color: black;
-    padding: 0.8em 1.8em;
+    padding: 15px;
+    
     cursor:pointer;
     user-select:none;
     text-decoration: none;
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-    border: 2px solid;
-  }
-.butnn:hover{
-    background-color: bisque;
-    border: solid 2.px black;
-    color: black;
+    border: 1.5px solid;
 }
+.butnn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px black;
+  }
+  
+  .butnn:active:after {
+    box-shadow: 0 0 0 0 black;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .butnn:active {
+    top: 1px;
+  }
+  
 .form{
     display: flex;
     justify-content: center;
@@ -330,7 +364,7 @@ a{
 .product_i{
     height: 450px;
     width: 500px;
-    border-radius: 40px;
+    border-radius: 30px;
     border: 2px solid ;
 }
 .img_id{
@@ -346,13 +380,21 @@ a{
 .description{
     display: flow-root;
     font-size: 20px;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid;
 }
 .discouner{
 display: flex;
 align-items: center;
 position: relative;
-bottom: 273px;
-left: -137px;
+bottom: 300px;
+left: -120px;
 background-color:crimson;
 border-radius: 75px;
 border: 1px ;
@@ -366,17 +408,28 @@ color: white;
 }
 .cross{
     position: relative;
-    top: -80px;
-    right: -30px;
+    top: -16px;
+    right: -81px;
     color: rgb(228, 26, 66);
-    font-size: 24px;
+    font-size: 28px;
 }
 .css_price{
     font-size: 22px;
     display: grid;
-    gap: 5px;
     align-items: center;
     justify-content: center;
+    border: 2px solid;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    height: 200px;
+    position: relative;
+    top: 110px;
+}
+.css_price p{
+    position: relative;
+    bottom: 16px;
 }
 .garantia{
     margin-left: 40px;
@@ -385,7 +438,7 @@ color: white;
     display: grid;
     align-items: center;
     border-radius: 30px;
-    background-color: aliceblue;
+    background:radial-gradient(bisque, rgb(153, 112, 112) );
     justify-items: center;
     align-content: center;
     justify-content: space-around;
