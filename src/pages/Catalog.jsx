@@ -15,10 +15,7 @@ export default () => {
                      {visibleGoods.map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id} >
                         <Card 
                             key={"card_" + i} 
-                            text={el.name} 
-                            like={(i+1) % 2 ===0 }
-                            picturues={el.picturues}
-                            weight={el.weight}/>
+                           {...el} />
                         </Link>)}
                 </div>
             </>

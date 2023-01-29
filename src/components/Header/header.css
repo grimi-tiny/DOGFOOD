@@ -26,6 +26,7 @@ header{
 .menu{
     display: flex;
     gap: 1em;
-    font-size: 25px;
+    font-size: 26px;
+    align-items: flex-start;
 }
 

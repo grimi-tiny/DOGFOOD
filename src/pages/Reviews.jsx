@@ -27,7 +27,8 @@ export default ()=>{
         </div>
     </>
 }*/
-import React, { useState, useEffect } from "react";
+
+/*import React, { useState, useEffect } from "react";
 import {useParams, Link} from "react-router-dom";
 import Review from "../components/Review/review";
 
@@ -59,9 +60,9 @@ import Review from "../components/Review/review";
         </div>
     </>
 }*/
-export default()=>{
+/*export default()=>{
     return<>
     <h1>Страница в разработке...</h1>
     <Link to="/catalog/:id">Вернутся назад</Link>
     </>
-}
+}*/

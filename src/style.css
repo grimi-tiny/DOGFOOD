@@ -8,17 +8,17 @@ a{
     color: inherit;
 
 }
-.container{
+.wrapper{
     min-height: 100vh;
     display: grid;
     grid-template-rows: 100px auto 50px;
     
 }
-.container>* {
+.wrapper>* {
     padding: 0 calc(50% - 600px);
 }
 @media (max-width: 1260px) {
-    .container>* {
+    .wrapper>* {
         padding: 0 30px;
     }
     .cards{
@@ -455,4 +455,10 @@ color: white;
 
 .spn{
     font-size: large;
+}
+.form_preview{
+    height: 137px;
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
