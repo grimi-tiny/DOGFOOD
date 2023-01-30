@@ -19,9 +19,9 @@ import AddForm from "./pages/AddForm";
 import { Api } from "./Api";
 import Ctx from "./Ctx";
 
-const PATH ="/";
+//const PATH ="/";
 // когда работаю с проектом локально на компьютере используем эту стрчку а 23 коментируем. 
-//const  PATH ="/DOGFOOD";
+const  PATH ="/DOGFOOD";
 // когда хотим на GitHub Pages мы комментируем 21 строку
 
 const smiles = ["fsdf"];
