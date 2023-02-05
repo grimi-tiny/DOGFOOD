@@ -13,6 +13,7 @@ export default () => {
         {favorites.length > 0 
             ? <>
                 <h1>Каталог товаров</h1>
+                <Link to={PATH+"catalog"} >Вернуться в каталог</Link>  
                 <Pagination hook={paginate}/>
                 <div className="cards">
                     {paginate.setPageData().map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id}>

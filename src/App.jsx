@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 //route - маршрут
-//import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css";
 //import products from "./assets/data.json";
 
@@ -20,12 +20,16 @@ import Favorites from "./pages/Favorites";
 import { Api } from "./Api";
 import Ctx from "./Ctx";
 
+import Fake from "./pages/Fake";
+
+
+
 const PATH ="/";
 // когда работаю с проектом локально на компьютере используем эту стрчку а 23 коментируем. 
 //const  PATH ="/DOGFOOD";
 // когда хотим на GitHub Pages мы комментируем 21 строку
 
-const smiles = ["fsdf"];
+const smiles = ["123","1234","12345","123456","1234567"];
 
 const App = () =>{
     let usr = localStorage.getItem("user8");
@@ -84,7 +88,8 @@ const App = () =>{
             return el.likes && el.likes.includes(user._id);
         }))
     }, [goods])
-/*<Route path={PATH + "reviews"} element={<Reviews/>}/>*/
+
+
     return (
     <Ctx.Provider value={{
         user:user,
@@ -121,7 +126,14 @@ const App = () =>{
                 <Route path={PATH + "catalog/:id/reviews"} element={<Reviews/>}/>
 
                 <Route path={PATH + "favorites"} element={<Favorites/>}/>
+                
+                {/* <Route path={PATH + "fake/:n/:title"} element={<Fake/>}/> */}
+                
             </Routes>   
+            {/* <ul>
+            {smiles.map((el,i) => <li key={el}>
+                <Link to={`${PATH}fake/${i+1}/${el}`}>{el}</Link></li>)}
+            </ul> */}
         </main>
         <Footer/>
     </div>

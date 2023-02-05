@@ -6,7 +6,9 @@ body{
 a{
     text-decoration: none;
     color: inherit;
-
+}
+a:hover {
+color: black;
 }
 .wrapper{
     min-height: 100vh;
@@ -36,6 +38,7 @@ a{
     height: 80px;
     background:radial-gradient(bisque, rgb(153, 112, 112) );
     border: 1.5px solid black;
+   
 }
 .discription{
     display: flex;
@@ -80,7 +83,7 @@ a{
     background:radial-gradient(bisque, rgb(153, 112, 112) );
     padding: 5px;
     border-radius: 30px;
-    font-size: 10px;
+    font-size: 5px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .productItem_2{
@@ -100,9 +103,8 @@ a{
     display: grid;
     align-items: center;
     justify-content: flex-end;
-    
     margin: 8px;
-    font-size: 12px;
+    
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .butn:hover{
@@ -175,13 +177,13 @@ a{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -10px;
+    top: -5px;
     background-color: bisque;
     border-radius: 20px;
     font-size: 16px;
     color: black;
     padding: 15px;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -334,7 +336,7 @@ a{
 }
 .butn-err{
     width: auto;
-    height: 25px;
+    height: 50px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -392,14 +394,14 @@ a{
 display: flex;
 align-items: center;
 position: relative;
-bottom: 250px;
-left: -120px;
+bottom: 260px;
+left: -110px;
 background-color:crimson;
 border-radius: 75px;
 border: 1px ;
-width: 40px;
-height: 40px;
-padding: 18px;
+width: 60px;
+height: 60px;
+padding: 10px;
 margin: 10px;
 font-size: 12px;
 color: white;
@@ -407,7 +409,7 @@ color: white;
 }
 .cross{
     position: relative;
-    top: -16px;
+    top: -30px;
     right: -81px;
     color: rgb(228, 26, 66);
     font-size: 28px;
@@ -428,7 +430,7 @@ color: white;
 }
 .css_price p{
     position: relative;
-    bottom: 16px;
+    
 }
 .garantia{
     margin-left: 40px;
@@ -438,8 +440,8 @@ color: white;
     align-items: center;
     border-radius: 30px;
     background:radial-gradient(bisque, rgb(153, 112, 112) );
-    justify-items: center;
-    align-content: center;
+    
+    
     justify-content: space-around;
     width: 350px;
 }

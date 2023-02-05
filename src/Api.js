@@ -55,11 +55,11 @@ class Api {
             }
         })
     }
-    swtLike(isLike, id){
-        return fetch(`${this.path}/products/likes/${id}`,{
+    setLike(id, isLike) {
+        return fetch(`${this.path}/products/likes/${id}`, {
             method: isLike ? "DELETE" : "PUT",
             headers: {
-                "authorization": `Bearer ${this.token}`  
+                "authorization": `Bearer ${this.token}`
             }
         })
     }

@@ -14,7 +14,7 @@ export default ({data}) => {
                 <div className="productItem_1">
                     <img className="itemimg" src="http://gavtorg.com/wp-content/uploads/2017/04/GAVTORG_-1-3-300x169.png"/>
                     <div className="text">
-                        <h2>Рога оленя для собак</h2>
+                        <h2 style={{fontSize: "20px"}}>Рога оленя для собак</h2>
                         <button  className="butnn">Цена: 350 ₽</button>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ export default ({data}) => {
                 <div className="productItem_1">
                     <img className="itemimg" src="https://k-lai.ru/wp-content/uploads/2022/07/image-41.png"/>
                     <div className="text">
-                        <h2>Крупная говяжья сушено-вяленая жилка</h2>
+                        <h2 style={{fontSize: "20px"}}>Крупная говяжья сушено-вяленая жилка</h2>
                         <button className="butnn">Цена: 450 ₽</button>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export default ({data}) => {
                 <div className="productItem_1">
                     <img className="itemimg" src="https://gavtorg.com/wp-content/uploads/2021/07/PhotoRoom-20220316_124745.png"/>
                     <div className="text">
-                        <h2>Бублик из бычьего корня</h2>
+                        <h2 style={{fontSize: "20px"}}>Бублик из бычьего корня</h2>
                         <button className="butnn">Цена: 340 ₽</button>
                     </div>
                 </div>
@@ -39,17 +39,17 @@ export default ({data}) => {
             <div className="productItem_2">
                     <img className="itemimg_1" src="https://files.lavkapitomca.ru/storage/product/00/50/90/photo/miski.png"/>
                     <div className="text">
-                        <h1 className="order">При заказе на 2500 ₽ вы получите двойную миску для вашего питомца </h1>
+                        <h1 className="order" style={{fontSize: "20px"}}>При заказе на 2500 ₽ вы получите двойную миску для вашего питомца </h1>
                         <button className="butnn">Посмотреть подробнее...</button>
                     </div>
                     <img  className="reklamaimg"src="https://static.insales-cdn.com/images/collections/1/4144/88715312/1-1.png" alt="" />
                 </div>
-                <h2 className="hit">Специальные предложения</h2>
+                <h2 className="hit" >Специальные предложения</h2>
                 <div className="productItems">
                 <div className="productItem_1">
                     <img className="itemimg" src="https://shampoo.doctor/images/detailed/1/Recover_dog.png"/>
                     <div className="text">
-                        <h2>Шампуни и средства по уходу для собак </h2>
+                        <h2 style={{fontSize: "20px"}}>Шампуни и средства по уходу для собак </h2>
                         <button className="butnn">От 899 ₽</button>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ export default ({data}) => {
                 <div className="productItem_1">
                     <img className="itemimg-ball" src="https://zoopt.ru/upload/iblock/078/079f448b_0c7c_11e6_80bb_002590b55a9c_1.jpg"/>
                     <div className="text">
-                        <h2>Игрукши для домашних питомцев</h2>
+                        <h2 style={{fontSize: "20px"}}>Игрукши для домашних питомцев</h2>
                         <button className="butnn">От 199 ₽</button>
                     </div>
                 </div>

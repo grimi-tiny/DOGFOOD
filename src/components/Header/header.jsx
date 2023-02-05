@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import  Ctx from "../../Ctx"
 import {PlusCircle,HeartFill} from "react-bootstrap-icons";
 import { Badge } from "react-bootstrap";
-import Favorites from "../../pages/Favorites";
+
 
 export default () => {
     const {user, setUser, setModalActive, PATH, favorites} = useContext(Ctx);
