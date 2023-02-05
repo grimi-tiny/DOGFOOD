@@ -1,13 +1,13 @@
 .card {
     box-shadow: 0 0 5px #2226;
     border-radius: 1em;
-    padding: 1em;
+    padding-top: 2em;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px auto 30px 40px;
     position: relative;
-    gap: 1em;
+    gap: 3em;
     justify-items: center;
     align-items: flex-start;
     height: 100%;
@@ -19,6 +19,59 @@
     right: 1em;
     color: crimson;
 }
-.card>.btn {
-    width: max-content;
+.card_name{
+    font-size: 17px;
+    padding-top: 10px;   
 }
+.butn-card:hover{
+    background: radial-gradient(bisque, rgb(153, 112, 112) );
+    border: solid 1.px black;
+    color: black;
+}
+.butn-card{
+    width: auto;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 1.5px solid;
+}
+.butn-card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px black;
+  }
+  
+  .butn-card:active:after {
+    box-shadow: 0 0 0 0 black;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .butn-card:active {
+    top: 1px;
+  }

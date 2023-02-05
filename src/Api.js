@@ -55,6 +55,15 @@ class Api {
             }
         })
     }
+    swtLike(isLike, id){
+        return fetch(`${this.path}/products/likes/${id}`,{
+            method: isLike ? "DELETE" : "PUT",
+            headers: {
+                "authorization": `Bearer ${this.token}`  
+            }
+        })
+    }
+
     addReview(productId, body) {
         return fetch(`${this.path}/products/review/${productId}`, {
             method: "POST",

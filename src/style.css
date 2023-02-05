@@ -29,8 +29,7 @@ a{
     display: grid;
     grid-template-columns:repeat(3, 1fr) ;
     gap: 2em;
-    
-   
+    padding-bottom: 20px;
 }
 .card{
     display: flex;
@@ -393,7 +392,7 @@ a{
 display: flex;
 align-items: center;
 position: relative;
-bottom: 300px;
+bottom: 250px;
 left: -120px;
 background-color:crimson;
 border-radius: 75px;

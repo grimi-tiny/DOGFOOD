@@ -112,12 +112,7 @@ export default ({}) => {
                 <p>Вес: {product.wight}</p>
                 <p>Количество: {product.stock} штук </p>
                <h3>Отывы:</h3>
-            <Link to="/reviews"> Перейти к отзывам</Link>  
+            <Link to={`/catalog/${id}/reviews`}> Перейти к отзывам</Link>  
         </div>
-        
-       
-            <div className="reviews">
-                {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} key={i}/>)}
-            </div>
     </>
 }

@@ -15,13 +15,14 @@ import Profile from "./pages/Profile";
 import Product from "./pages/Product";
 import Reviews from "./pages/Reviews";
 import AddForm from "./pages/AddForm";
+import Favorites from "./pages/Favorites";
 
 import { Api } from "./Api";
 import Ctx from "./Ctx";
 
-//const PATH ="/";
+const PATH ="/";
 // когда работаю с проектом локально на компьютере используем эту стрчку а 23 коментируем. 
-const  PATH ="/DOGFOOD";
+//const  PATH ="/DOGFOOD";
 // когда хотим на GitHub Pages мы комментируем 21 строку
 
 const smiles = ["fsdf"];
@@ -37,7 +38,8 @@ const App = () =>{
     const [api, setApi] = useState(new Api(token));
     const [goods, setGoods] = useState([]);
     const [visibleGoods, setVisibleGoods]= useState(goods);
-    
+    const [favorites, setFavorites] = useState([]);
+
     useEffect(() => {
         console.log("Hello")
         console.log(token);
@@ -76,10 +78,13 @@ const App = () =>{
                 })
         }
     }, [api])
-    useEffect(() =>{
-        setVisibleGoods(goods);
+    useEffect(() => {
+        setFavorites(goods.filter(el => {
+            // Найти только те товары, в которых свойство likes ([]) включает в себя id моего пользователя
+            return el.likes && el.likes.includes(user._id);
+        }))
     }, [goods])
-
+/*<Route path={PATH + "reviews"} element={<Reviews/>}/>*/
     return (
     <Ctx.Provider value={{
         user:user,
@@ -88,12 +93,14 @@ const App = () =>{
         modalActive:modalActive,
         goods:goods,
         visibleGoods:visibleGoods,
+        favorites: favorites,
         setUser:setUser,
         setToken:setToken,
         setApi:setApi,
         setModalActive:setModalActive,
         setGoods:setGoods,
         setVisibleGoods:setVisibleGoods,
+        setFavorites: setFavorites,
         PATH: PATH
         
         }}>
@@ -111,7 +118,9 @@ const App = () =>{
 
                 <Route path={PATH + "add"} element={<AddForm/>}/>
 
-                <Route path={PATH + "reviews"} element={<Reviews/>}/>
+                <Route path={PATH + "catalog/:id/reviews"} element={<Reviews/>}/>
+
+                <Route path={PATH + "favorites"} element={<Favorites/>}/>
             </Routes>   
         </main>
         <Footer/>

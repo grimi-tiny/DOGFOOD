@@ -28,11 +28,11 @@ export default ()=>{
     </>
 }*/
 
-/*import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {useParams, Link} from "react-router-dom";
 import Review from "../components/Review/review";
 
-/*export default ({}) => {
+export default ({}) => {
     const {id} = useParams();
     const [product, setProduct] = useState({});
     const [users, setUsers] = useState([]);
@@ -53,16 +53,10 @@ import Review from "../components/Review/review";
         }
     })
     return<>
-    <Link to="/catalog/:id">Вернуться к товару</Link>
+    <Link to={`/catalog/${id}`}>Вернуться к товару</Link>
     <h3>Отывы</h3>
     <div className="reviews">
             {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} key={i}/>)}
         </div>
     </>
-}*/
-/*export default()=>{
-    return<>
-    <h1>Страница в разработке...</h1>
-    <Link to="/catalog/:id">Вернутся назад</Link>
-    </>
-}*/
+}

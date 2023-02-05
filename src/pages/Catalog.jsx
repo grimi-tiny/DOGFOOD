@@ -3,16 +3,20 @@ import Card from "../components/Card";
 import { Link } from "react-router-dom";
 import {EmojiFrown} from "react-bootstrap-icons";
 import Ctx from "../Ctx";
+import Pagination from "../components/Pagination";
+import usePagination from "../hooks/usePagination";
 
 export default () => {
     const {visibleGoods,user,PATH} = useContext(Ctx);
+    const paginate = usePagination(visibleGoods,9);
     return <>
     {user && <>
     {visibleGoods.length > 0 
     ? <>
             <h1>Каталог товаров</h1>
+            <Pagination hook={paginate}/>
                 <div className="cards">
-                     {visibleGoods.map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id} >
+                     {paginate.setPageData().map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id} >
                         <Card 
                             key={"card_" + i} 
                            {...el} />
