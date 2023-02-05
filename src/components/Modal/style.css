@@ -9,16 +9,19 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    
 }
 .modal{
     width: 400px;
+    height: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 2px #0006, 0 0 8px 2px #0004 ;
     display: grid;
-    gap: 20px;
+    gap: 10px;
     position: relative;
+    border: 1.5px solid black;
 }
 .modal h2 {
     margin: 0;
@@ -31,11 +34,11 @@ form{
 }
 input{
     flex: 1;
-    height: 25px;
+    height: auto;
     box-sizing: border-box;
     padding: 6px 12px;
-    border-radius: 8px;
-    border: 3px solid black;
+    border-radius: 14px;
+    border: 2.5px solid black;
     font-size: 16px;
     outline: none;
  }
@@ -44,21 +47,23 @@ input:focus{
  }
  button.btn{
     border: none;
-    height: 30px;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 14px;
     background-color:  bisque;
  }
  button.link{
     border-color: transparent;
-    border: 3px solid rgb(153, 112, 112);
+    border: 2.5px solid rgb(153, 112, 112);
     box-sizing: border-box;
+    height: auto;
  }
  #modal-close{
     width: 20px;
     height: 20px;
-    position: absolute;
-    bottom: 220px;
-    right: 2px;
+    position: relative;
+    bottom: 25px;
+    left: 354px;
     cursor: pointer;
  }
+ 
  

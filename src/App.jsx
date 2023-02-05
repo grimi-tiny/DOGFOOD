@@ -83,10 +83,12 @@ const App = () =>{
         }
     }, [api])
     useEffect(() => {
-        setFavorites(goods.filter(el => {
-            // Найти только те товары, в которых свойство likes ([]) включает в себя id моего пользователя
-            return el.likes && el.likes.includes(user._id);
-        }))
+        if (goods && goods.length) {
+            setFavorites(goods.filter(el => {
+                // Найти только те товары, в которых свойство likes ([]) включает в себя id моего пользователя
+                return el.likes && el.likes.includes(user._id);
+            }))
+        }
     }, [goods])
 
 
