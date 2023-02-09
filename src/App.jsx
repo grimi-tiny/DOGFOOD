@@ -113,7 +113,7 @@ const App = () =>{
         }}>
     <div className="wrapper">
         <Header/>
-        <main>
+        <main className="py-4">
             <Routes>
                 <Route path={PATH} element={<Home data={smiles}/>}/>
 

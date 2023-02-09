@@ -6,7 +6,6 @@ header{
     align-items: center;
     gap: 30px;
     font-size: 15px;
-    
 }
 .logo{
     
@@ -16,9 +15,7 @@ header{
     background-color: transparent;
     border: none;
     border-bottom: 2px solid bisque;
-    outline: none;
-    
-    
+    outline: none;    
 }
 .search:focus{
     border-bottom: rgb(0, 0, 0);
@@ -29,4 +26,19 @@ header{
     font-size: 26px;
     align-items: flex-start;
 }
-
+.badge-link{
+    position: relative;
+}
+.badge{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    position:absolute;
+    bottom:  -3px;
+    right: -4px;
+    background-color: #fff;
+}

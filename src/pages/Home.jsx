@@ -57,7 +57,7 @@ export default ({data}) => {
                 <div className="productItem_1">
                     <img className="itemimg-ball" src="https://zoopt.ru/upload/iblock/078/079f448b_0c7c_11e6_80bb_002590b55a9c_1.jpg"/>
                     <div className="text">
-                        <h2 style={{fontSize: "20px"}}>Игрукши для домашних питомцев</h2>
+                        <h2 style={{fontSize: "20px"}}>Игрушки для домашних питомцев</h2>
                         <button className="butnn">От 199 ₽</button>
                     </div>
                 </div>
