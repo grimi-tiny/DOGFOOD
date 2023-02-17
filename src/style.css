@@ -376,6 +376,7 @@ color: black;
 .Prod-description{
     display: flex;
    padding-top: 20px;
+   justify-content: space-between;
     
 }
 .description{
@@ -394,8 +395,8 @@ color: black;
 display: flex;
 align-items: center;
 position: relative;
-bottom: 260px;
-left: -110px;
+bottom: 360px;
+left: -130px;
 background-color:crimson;
 border-radius: 75px;
 border: 1px ;
@@ -409,8 +410,8 @@ color: white;
 }
 .cross{
     position: relative;
-    top: -30px;
-    right: -81px;
+    top: -76px;
+    right: -86px;
     color: rgb(228, 26, 66);
     font-size: 28px;
 }
@@ -424,13 +425,17 @@ color: white;
     border-radius: 30px;
     padding: 10px;
     text-align: center;
-    height: 200px;
+    height: 300px;
+    width: 220px;
     position: relative;
     top: 110px;
 }
 .css_price p{
     position: relative;
     
+}
+.css_price button{
+    width: 150px;
 }
 .garantia{
     margin-left: 40px;

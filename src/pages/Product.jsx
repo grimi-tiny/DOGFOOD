@@ -4,14 +4,15 @@ import {Trash3} from "react-bootstrap-icons";
 import Review from "../components/Review/review";
 import Ctx from "../Ctx";
 
-export default ({}) => {
+export default ({name, pictures, price, likes, _id}) => {
     const {id} = useParams();
     const [product, setProduct] = useState({});
     // По id товара получаются данные о товаре для отрисовки страницы с товаром
     const productDiscountPrice = Math.round(product.price - (product.price * product.discount) / 100);
-    const {api, PATH, user, setGoods} = useContext(Ctx);
+    const {api, PATH, user, setGoods,setBasket} = useContext(Ctx);
     const navigate = useNavigate();
 
+    const [like, setLike] = useState(likes && likes.includes(user._id));
     useEffect(() => {
         api.getProduct(id)
             .then(res => res.json())
@@ -37,6 +38,34 @@ export default ({}) => {
                 }
             })
     }
+    const buy = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setBasket(prev =>{
+            const test= prev.filter(el => el._id === _id)
+            if(test.length){
+                return prev.map(el => {
+                    if (el.id === _id){
+                        el.cnt++;
+                    }
+                    return el;
+                });
+            }else{
+                return [...prev,{id: _id, cnt: 1}]
+            }
+            
+        })
+        
+    }
+    useEffect (() =>{
+        api.getProducts()
+        .then(res => res.json())
+        .then(data =>{
+            if (!data.error){
+                setGoods(data.products);
+            }
+        })
+    }, [like])
     return <>
         {product && product.author && product.author._id === user._id && <button 
             onClick={remove} 
@@ -62,7 +91,7 @@ export default ({}) => {
                     <h3>Цена <i class="fa-solid fa-ruble-sign"></i></h3>
                     <p >{product.price} ₽</p>
                     
-                    <button className="butnn">
+                    <button className="butnn" onClick={buy}>
                         <span style={{color: "rgb(228, 26, 66)" }} 
                         className={product.discount > 0 
                             ? 
@@ -70,7 +99,7 @@ export default ({}) => {
                             : 
                                 "product__price"}>{productDiscountPrice} ₽
                         </span>
-                         <br />Добавить в корзину
+                        
                          </button>
                 
                     

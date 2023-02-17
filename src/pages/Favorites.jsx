@@ -12,7 +12,7 @@ export default () => {
     return <>
         {favorites.length > 0 
             ? <>
-                <h1>Каталог товаров</h1>
+                <h1>Любимые товары</h1>
                 <Link to={PATH+"catalog"} >Вернуться в каталог</Link>  
                 <Pagination hook={paginate}/>
                 <div className="cards">

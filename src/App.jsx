@@ -19,8 +19,8 @@ import Favorites from "./pages/Favorites";
 
 import { Api } from "./Api";
 import Ctx from "./Ctx";
-
-import Fake from "./pages/Fake";
+import Basket from "./pages/Basket";
+// import Fake from "./pages/Fake";
 
 
 
@@ -43,6 +43,7 @@ const App = () =>{
     const [goods, setGoods] = useState([]);
     const [visibleGoods, setVisibleGoods]= useState(goods);
     const [favorites, setFavorites] = useState([]);
+    const [basket,setBasket] =useState(localStorage.getItem("basket") ? JSON.parse(localStorage.getItem("basket8")) : [])
 
     useEffect(() => {
         console.log("Hello")
@@ -90,8 +91,11 @@ const App = () =>{
             }))
         }
     }, [goods])
-
-
+    useEffect(() =>{
+        console.log("basket");      
+            localStorage.setItem("basket8", JSON.stringify(basket))
+        
+    }, [basket])
     return (
     <Ctx.Provider value={{
         user:user,
@@ -108,7 +112,9 @@ const App = () =>{
         setGoods:setGoods,
         setVisibleGoods:setVisibleGoods,
         setFavorites: setFavorites,
-        PATH: PATH
+        PATH: PATH,
+        basket,
+        setBasket
         
         }}>
     <div className="wrapper">
@@ -130,7 +136,8 @@ const App = () =>{
                 <Route path={PATH + "favorites"} element={<Favorites/>}/>
                 
                 {/* <Route path={PATH + "fake/:n/:title"} element={<Fake/>}/> */}
-                
+                <Route path={PATH + "basket"} element={<Basket/>}/>
+
             </Routes>   
             {/* <ul>
             {smiles.map((el,i) => <li key={el}>

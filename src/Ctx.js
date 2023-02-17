@@ -15,4 +15,6 @@ export default React.createContext({
     setVisibleGoods: () => {},
     favorites: [],
     setFavorites: () => {},
+    basket: [],
+    setBasket: () =>{}
 });

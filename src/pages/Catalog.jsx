@@ -9,6 +9,7 @@ import usePagination from "../hooks/usePagination";
 export default () => {
     const {visibleGoods,user,PATH} = useContext(Ctx);
     const paginate = usePagination(visibleGoods,9);
+    
     return <>
     {user && <>
     {visibleGoods.length > 0 
