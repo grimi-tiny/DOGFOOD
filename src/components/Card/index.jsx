@@ -3,7 +3,7 @@ import "./index.css";
 import Ctx from "../../Ctx";
 
 export default ({name, pictures, price, likes, _id}) => {
-    const {user, setFavorites, api, setGoods, setCart, setVisibleGoods, setBasket} = useContext(Ctx);
+    const {user, setFavorites, api, setGoods, setVisibleGoods, setBasket} = useContext(Ctx);
     const [like, setLike] = useState(likes && likes.includes(user._id));
     const [flag, setFlag] = useState(false);
 
@@ -65,6 +65,17 @@ export default ({name, pictures, price, likes, _id}) => {
                 setGoods(data.products);
             }
         })
+    }, [like])
+    useEffect(() =>{
+        if (flag){
+            api.getProducts()
+            .then(res => res.json())
+            .then(data => {
+                if(!data.error){
+                    setGoods(data.products);
+                }
+            })
+        }
     }, [like])
     
     return <div className="card">

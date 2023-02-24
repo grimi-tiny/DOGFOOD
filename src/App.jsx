@@ -37,13 +37,14 @@ const App = () =>{
         usr=JSON.parse(usr);
     }
     const [user, setUser] = useState(usr);
-    const [token, setToken] = useState(localStorage.getItem("token8"))
+    const [token, setToken] = useState(localStorage.getItem("token8"));
     const [modalActive, setModalActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
     const [goods, setGoods] = useState([]);
-    const [visibleGoods, setVisibleGoods]= useState(goods);
+    const [authors, setAuthors] = useState([]);
+    const [visibleGoods, setVisibleGoods] = useState(goods);
     const [favorites, setFavorites] = useState([]);
-    const [basket,setBasket] =useState(localStorage.getItem("basket") ? JSON.parse(localStorage.getItem("basket8")) : [])
+    const [basket, setBasket] = useState(localStorage.getItem("basket8") ? JSON.parse(localStorage.getItem("basket8")) : []);
 
     useEffect(() => {
         console.log("Hello")
@@ -79,7 +80,9 @@ const App = () =>{
             //Загрузить данные с сервера
             api.getProducts()
                 .then(res => res.json())
-                .then(data => {setGoods(data.products);
+                .then(data => {
+                    setVisibleGoods(data.products);
+                    setGoods(data.products);
                 })
         }
     }, [api])

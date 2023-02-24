@@ -102,10 +102,17 @@ color: black;
 .text{
     display: grid;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 8px;
-    
+    justify-items: center;
+    width: 200px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.text_1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
 }
 .butn:hover{
     background-color: rgb(141, 111, 111);
