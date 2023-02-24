@@ -173,6 +173,155 @@ color: black;
     top: 1px;
   }
 /*кнопка в странице товара*/
+
+.butnn-home{
+    width: 650px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 1.5px solid;
+}
+.butnn-home1{
+    width: 350px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 1.5px solid;
+}
+.butnn-home:hover{
+    background: radial-gradient(bisque, rgb(153, 112, 112) );
+    border: solid 1.px black;
+    color: black;
+}
+.butnn-home::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px black;
+}
+.butnn-home:active:after {
+    box-shadow: 0 0 0 0 black;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+.butnn-home:active {
+    top: 1px;
+}
+
+.butnn-home{
+    width: 650px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 1.5px solid;
+}
+.butnn-home1{
+    width: 350px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor:pointer;
+    user-select:none;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border: 1.5px solid;
+}
+.butnn-home1:hover{
+    background: radial-gradient(bisque, rgb(153, 112, 112) );
+    border: solid 1.px black;
+    color: black;
+}
+.butnn-home1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px black;
+}
+.butnn-home1:active:after {
+    box-shadow: 0 0 0 0 black;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+.butnn-home1:active {
+    top: 1px;
+  }
+
 .butnn:hover{
     background: radial-gradient(bisque, rgb(153, 112, 112) );
     border: solid 1.px black;
@@ -474,4 +623,24 @@ color: white;
     background-size: contain;
     background-position: top right;
     background-repeat: no-repeat;
+}
+.profile-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-row svg{
+    cursor: pointer;
+    fill: rgba(153, 112, 112, 0.041);
+}
+.profile-row svg:hover{
+    cursor: pointer;
+    fill: black;
+}
+.profile-row input{
+    max-width: 500px;
+}
+.btn.sort{
+    background-color: rgb(153, 112, 112);
+    color: black;
 }

@@ -66,6 +66,7 @@ export default ({name, pictures, price, likes, _id}) => {
             }
         })
     }, [like])
+    
     useEffect(() =>{
         if (flag){
             api.getProducts()
@@ -77,11 +78,11 @@ export default ({name, pictures, price, likes, _id}) => {
             })
         }
     }, [like])
-    
+
     return <div className="card">
         <img src={pictures} alt={name} style={{height: "150px"}}/>
         <h3 className="card_name">{name}</h3>
-        <button className="butn-card" onClick={buy}> Купить товар {price}</button>
+        <button className="butn-card" onClick={buy}> {price} ₽</button>
         <span className="card__heart" onClick={update}>
         {
         like

@@ -41,7 +41,7 @@ export default ({data}) => {
                     <img className="itemimg_1" src="https://files.lavkapitomca.ru/storage/product/00/50/90/photo/miski.png"/>
                     <div className="text_1">
                         <h1 className="order" style={{fontSize: "20px"}}>При заказе на 2500 ₽ вы получите двойную миску для вашего питомца </h1>
-                        <button className="butnn">Посмотреть подробнее...</button>
+                        <Link to={PATH+"catalog"}><button className="butnn-home">Посмотреть подробнее...</button></Link>
                     </div>
                     <img  className="reklamaimg"src="https://static.insales-cdn.com/images/collections/1/4144/88715312/1-1.png" alt="" />
                 </div>
@@ -51,7 +51,7 @@ export default ({data}) => {
                     <img className="itemimg" src="https://shampoo.doctor/images/detailed/1/Recover_dog.png"/>
                     <div className="text_1">
                         <h2 style={{fontSize: "20px"}}>Шампуни и средства по уходу для собак </h2>
-                        <button className="butnn">От 899 ₽</button>
+                        <Link to={PATH+"catalog"}><button className="butnn-home1">От 899 ₽</button></Link>
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@ export default ({data}) => {
                     <img className="itemimg-ball" src="https://zoopt.ru/upload/iblock/078/079f448b_0c7c_11e6_80bb_002590b55a9c_1.jpg"/>
                     <div className="text_1">
                         <h2 style={{fontSize: "20px"}}>Игрушки для домашних питомцев</h2>
-                        <button className="butnn">От 199 ₽</button>
+                        <Link to={PATH+"catalog"}><button className="butnn-home1">От 199 ₽</button></Link>
                     </div>
                 </div>
             </div>
