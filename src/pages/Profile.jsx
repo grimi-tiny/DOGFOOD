@@ -53,7 +53,7 @@ export default () =>{
                 </>
                 : <>
                     <Form.Control type="text" value={name} required onChange={e => setName(e.target.value)}/>
-                    <Check2Square onClick={updateUser} />
+                    <Check2Square onClick={updateUser} style={{color: "black"}}/>
                     <XSquare onClick={() => {
                         setName(user.name);
                         setNameFlag(false);
@@ -69,7 +69,7 @@ export default () =>{
                 </>
                 : <>
                     <Form.Control type="text" value={text} required onChange={e => setText(e.target.value)}/>
-                    <Check2Square onClick={updateUser}/>
+                    <Check2Square onClick={updateUser} />
                     <XSquare onClick={() => {
                         setText(user.about);
                         setTextFlag(false);
@@ -79,7 +79,7 @@ export default () =>{
         </p>
         <p className="profile-row"><a href={`mailto:${user.email}`}>{user.email}</a></p>
             {user.group && <p className="profile-row">{user.group}</p>}
-            <p><a href="" onClick={logOut} style={{color: "rgba(153, 112, 112)"}}>Выйти из аккаунта</a></p>
+            <p><a href="" onClick={logOut} style={{color: "black"}}>Выйти из аккаунта</a></p>
         </Col>
         <Col xs={12} md={4}>
             <p className="profile-row">

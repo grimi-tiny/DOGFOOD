@@ -82,7 +82,6 @@ color: black;
     padding: 5px;
     border-radius: 30px;
     font-size: 5px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .productItem_2{
     display: flex;
@@ -93,7 +92,6 @@ color: black;
     padding: 10px;
     border-radius: 30px;
     font-size: 10px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .home{
     margin-top: 15px;
@@ -103,7 +101,6 @@ color: black;
     display: grid;
     text-align: center;
     align-items: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     gap: 10px;
 }
 .text_1{
@@ -118,13 +115,6 @@ color: black;
     color: white;
 }
 .butn{
-   /* border-radius: 20px;
-    padding: 5px;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    align-items: center;
-    border: solid 3px;
-    background-color: bisque;*/
     width: auto;
     height: 50px;
     align-items: center;
@@ -184,7 +174,6 @@ color: black;
     font-size: 16px;
     color: black;
     padding: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -206,7 +195,6 @@ color: black;
     color: black;
     padding: 15px;
     margin-top: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -258,7 +246,6 @@ color: black;
     font-size: 16px;
     color: black;
     padding: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -280,7 +267,6 @@ color: black;
     color: black;
     padding: 15px;
     margin-top: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -337,7 +323,6 @@ color: black;
     font-size: 16px;
     color: black;
     padding: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor:pointer;
     user-select:none;
     text-decoration: none;
@@ -393,8 +378,6 @@ color: black;
     width: 200px;
     border-radius: 20px;
     font-size: 16px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
 }
 .form_box{
     display: grid;
@@ -407,7 +390,6 @@ color: black;
     border-radius: 20px;
     padding: 10px;
     font-style: italic;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: solid 1px;
     background-color: bisque; 
 }
@@ -488,22 +470,23 @@ color: black;
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-    border: 2.5px solid;
+    border: 1.5px solid;
 }
 .butn-err:hover{
     background-color: rgb(141, 111, 111);
-    border: solid 2.px black;
-    color: white;
+    border: solid 1.5px black;
     }
 .reviews{
     display: grid;
-    grid-template-columns: 350px 200px 200px ;
+    grid-template-columns: 400px 150px 200px ;
+    gap: 20px;
 }
 .product_i{
     height: 450px;
     width: 500px;
     border-radius: 30px;
-    border: 2px solid ;
+    border: 1px solid ;
+    box-shadow: 8px 10px 5px 2px rgba(20, 20, 20, 0.2);
 }
 .img_id{
     font-size: 20px;
@@ -526,7 +509,8 @@ color: black;
     border-radius: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 2px solid;
+    border: 1px solid;
+    box-shadow: 8px 10px 5px 2px rgba(20, 20, 20, 0.2);
 }
 .discouner{
 display: flex;
@@ -557,7 +541,7 @@ color: white;
     display: grid;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
+    border: 1.5px solid;
     background:radial-gradient(bisque, rgb(153, 112, 112) );
     border-radius: 30px;
     padding: 10px;
@@ -566,6 +550,7 @@ color: white;
     width: 220px;
     position: relative;
     top: 110px;
+    box-shadow: 8px 10px 5px 2px rgba(20, 20, 20, 0.2);
 }
 .css_price p{
     position: relative;
@@ -577,13 +562,12 @@ color: white;
 .garantia{
     margin-left: 40px;
     padding: 20px;
-    border: 2px solid;
+    border: 1px solid;
     display: grid;
     align-items: center;
     border-radius: 30px;
     background:radial-gradient(bisque, rgb(153, 112, 112) );
-    
-    
+    box-shadow: 8px 10px 5px 2px rgba(20, 20, 20, 0.2);
     justify-content: space-around;
     width: 350px;
 }
@@ -609,11 +593,12 @@ color: white;
     display: flex;
     align-items: center;
     gap: 20px;
+
     
 }
 .profile-row svg{
     cursor: pointer;
-    fill: rgba(153, 112, 112, 0.041);
+    color: black;
 }
 
 .profile-row input{

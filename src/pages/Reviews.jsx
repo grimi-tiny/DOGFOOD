@@ -58,5 +58,6 @@ export default ({}) => {
     <div className="reviews">
             {product.reviews && product.reviews.length > 0 && product.reviews.map((el, i) => <Review {...el} key={i}/>)}
         </div>
+        
     </>
 }

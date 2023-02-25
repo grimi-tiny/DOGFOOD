@@ -11,7 +11,7 @@ export default ()=>{
     return <div className="promo">
     <div className="cat_cont">
     <h1 style={{fontSize: "30px"}}>Порадуй своего питомца!</h1>
-        <Link className="cat" to={PATH+"catalog"} style={{fontSize: "30px"}}>Перейти в каталог</Link>
+        <Link className="cat" to={PATH+"catalog"} style={{fontSize: "30px"}}>Переходи в каталог</Link>
     </div>
     <img src={corg} alt="Мопсик" />
     </div>
