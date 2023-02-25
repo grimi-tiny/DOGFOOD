@@ -5,6 +5,7 @@ import Ctx from "../Ctx";
 import Row from "../components/Row/Row";
 import {EmojiFrown} from "react-bootstrap-icons"
 
+
 export default () => {
     const [gds, setGds] = useState([]);
     const {basket, goods, PATH} = useContext(Ctx);
@@ -21,6 +22,7 @@ export default () => {
      {basket.length > 0 
             ? <>
              <h1>Корзина</h1>
+             <Link to={PATH+"catalog"} >Вернуться в каталог</Link>
                 {basket.length > 0 && gds.length > 0 && <Table hover>
                 <thead>
                     <tr>
@@ -31,7 +33,7 @@ export default () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {basket.map((el, i) => <Row key={el.id} {...gds[i]} {...el} />)}
+                    {basket.map((el, i) => <Row key={el.id} {...gds[i]} {...el} /> )}
                 </tbody>
                 <tfoot>
                     <tr>

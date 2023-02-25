@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Ctx from "../../Ctx";
 import "./ads.css";
-import pug from "./img/pug1.jpg";
 import corg from "./img/corg1.png"
 
 export default ()=>{
